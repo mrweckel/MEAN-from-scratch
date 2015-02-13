@@ -1,4 +1,5 @@
-var User = require('mongoose').model('User');
+var User = require('mongoose').model('User'),
+    passport = require('passport');
 
 exports.create = function(req, res, next){
   var user = new User(req.body);
@@ -10,7 +11,7 @@ exports.create = function(req, res, next){
       res.json(user);
     }
   });
-}
+};
 
 exports.list = function(req, res, next){
   User.find({}, function(err, users){
