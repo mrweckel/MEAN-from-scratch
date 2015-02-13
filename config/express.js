@@ -1,6 +1,10 @@
 var config = require('./config'),
   express = require('express'),
-  bodyParser = require('body-parser');
+  bodyParser = require('body-parser'),
+  session = require('express-session'),
+  flash = require('connect-flash');
+
+passport = require('passport')
 
 module.exports = function() {
   var app = express();
